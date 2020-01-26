@@ -34,9 +34,35 @@ body {
   opacity: 1;
 }
 
+.slide .content {
+  position: absolute;
+  bottom: 70px;
+  left: -600px;
+  opacity: 0;
+  width: 600px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #222;
+  padding: 35px;
+}
+
+.slide.current .content {
+  opacity: 1;
+  transform: translateX(600px);
+  transition: all 0.7s ease-in-out 0.3s;
+}
+
+button#next {
+  position: absolute;
+  top: 50%;
+}
+
+.slide .content h1 {
+  margin-bottom: 10px;
+}
+
 /* Background Images */
 .slide:first-child {
-  background: url("./images/woman-in-black-turtle-neck-top-2237300.jpg")
+  background: url("./images/guilherme-stecanella-_dH-oQF9w-Y-unsplash.jpg")
     no-repeat center center/cover;
 }
 
@@ -53,4 +79,14 @@ body {
 .slide:nthchild(4) {
   background: url("./images/amir-taheri-XXfYJYCZHqk-unsplash.jpg") no-repeat
     center center/cover;
+}
+
+.slide:nthchild(5) {
+  background: url("./images/woman-stands-on-mountain-over-field-under-cloudy-sky-at-847483.jpg")
+    no-repeat center center/cover;
+}
+
+.slide:nthchild(6) {
+  background: url("./images/jumpshot-photography-of-woman-in-white-and-yellow-dress-near-884977.jpg")
+    no-repeat center center/cover;
 }
